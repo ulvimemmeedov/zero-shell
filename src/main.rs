@@ -5,7 +5,11 @@ use std::process::{Child, Command, Stdio};
 
 fn main(){
     loop {
-
+        println!("
+        Zero-Shell
+        version 0.0.1
+        
+        ");
         print!("Zero-Shell> ");
         stdout().flush().unwrap();
 
@@ -23,7 +27,10 @@ fn main(){
 
             match command {
                 "getinfo"=>{
-                    print!("test")
+                    println!("
+                        Zero-Shell
+                        version 0.0.1
+                    ")
                 },
                 "cd" => {
                     let new_dir = args.peekable().peek().map_or("/", |x| *x);
